@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html
+    style=""
+    class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths listbuilder-popup-open"
+    lang="en"
+>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<!--         <script type="text/javascript" src="art_files/d2c968df0e"></script>
+        <script type="text/javascript" async="" src="art_files/wbm8080f"></script>
+        <script src="art_files/nr-1169.js"></script>
+        <script async="" src="art_files/uwt.js"></script>
+        <script src="art_files/186529985017980.js" async=""></script>
+        <script async="" src="art_files/fbevents.js"></script>
+        <script async="" src="art_files/profitwell.js"></script>
+        <script type="text/javascript" async="" src="art_files/mixpanel-2-latest.js"></script>
+        <script async="" src="art_files/analytics.js"></script>
+        <script>
+            window.NREUM || (NREUM = {});
+            NREUM.info = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", licenseKey: "d2c968df0e", applicationID: "50242477", transactionName: "cAtaEkBeCFUEExsFRUcNVwpXQktKCQ5D", queueTime: 5, applicationTime: 70, agent: "" };
+        </script>
+        <script>
+            (window.NREUM || (NREUM = {})).loader_config = { licenseKey: "d2c968df0e", applicationID: "50242477" };
+            window.NREUM || (NREUM = {}),
+                (__nr_require = (function (e, n, t) {
+                    function r(t) {
+                        if (!n[t]) {
+                            var i = (n[t] = { exports: {} });
+                            e[t][0].call(
+                                i.exports,
+                                function (n) {
+                                    var i = e[t][1][n];
+                                    return r(i || n);
+                                },
+                                i,
+                                i.exports
+                            );
+                        }
+                        return n[t].exports;
+                    }
+                    if ("function" == typeof __nr_require) return __nr_require;
+                    for (var i = 0; i < t.length; i++) r(t[i]);
+                    return r;
+                })(
+                    {
+                        1: [
+                            function (e, n, t) {
+                                function r() {}
+                                function i(e, n, t) {
+                                    return function () {
+                                        return o(e, [u.now()].concat(f(arguments)), n ? null : this, t), n ? void 0 : this;
+                                    };
+                                }
+                                var o = e("handle"),
+                                    a = e(4),
+                                    f = e(5),
+                                    c = e("ee").get("tracer"),
+                                    u = e("loader"),
+                                    s = NREUM;
+                                "undefined" == typeof window.newrelic && (newrelic = s);
+                                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                                    l = "api-",
+                                    d = l + "ixn-";
+                                a(p, function (e, n) {
+                                    s[n] = i(l + n, !0, "api");
+                                }),
+                                    (s.addPageAction = i(l + "addPageAction", !0)),
+                                    (s.setCurrentRouteName = i(l + "routeName", !0)),
+                                    (n.exports = newrelic),
+                                    (s.interaction = function () {
+                                        return new r().get();
+                                    });
+                                var m = (r.prototype = {
+                                    createTracer: function (e, n) {
+                                        var t = {},
+                                            r = this,
+                                            i = "function" == typeof n;
+                                        return (
+                                            o(d + "tracer", [u.now(), e, t], r),
+                                            function () {
+                                                if ((c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], t), i))
+                                                    try {
+                                                        return n.apply(this, arguments);
+                                                    } catch (e) {
+                                                        throw (c.emit("fn-err", [arguments, this, e], t), e);
+                                                    } finally {
+                                                        c.emit("fn-end", [u.now()], t);
+                                                    }
+                                            }
+                                        );
+                                    },
+                                });
+                                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) {
+                                    m[n] = i(d + n);
+                                }),
+                                    (newrelic.noticeError = function (e, n) {
+                                        "string" == typeof e && (e = new Error(e)), o("err", [e, u.now(), !1, n]);
+                                    });
+                            },
+                            {},
+                        ],
+                        2: [
+                            function (e, n, t) {
+                                function r(e, n) {
+                                    var t = e.getEntries();
+                                    t.forEach(function (e) {
+                                        "first-paint" === e.name ? c("timing", ["fp", Math.floor(e.startTime)]) : "first-contentful-paint" === e.name && c("timing", ["fcp", Math.floor(e.startTime)]);
+                                    });
+                                }
+                                function i(e, n) {
+                                    var t = e.getEntries();
+                                    t.length > 0 && c("lcp", [t[t.length - 1]]);
+                                }
+                                function o(e) {
+                                    if (e instanceof s && !l) {
+                                        var n,
+                                            t = Math.round(e.timeStamp);
+                                        (n = t > 1e12 ? Date.now() - t : u.now() - t), (l = !0), c("timing", ["fi", t, { type: e.type, fid: n }]);
+                                    }
+                                }
+                                if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) {
+                                    var a,
+                                        f,
+                                        c = e("handle"),
+                                        u = e("loader"),
+                                        s = NREUM.o.EV;
+                                    if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) {
+                                        (a = new PerformanceObserver(r)), (f = new PerformanceObserver(i));
+                                        try {
+                                            a.observe({ entryTypes: ["paint"] }), f.observe({ entryTypes: ["largest-contentful-paint"] });
+                                        } catch (p) {}
+                                    }
+                                    if ("addEventListener" in document) {
+                                        var l = !1,
+                                            d = ["click", "keydown", "mousedown", "pointerdown", "touchstart"];
+                                        d.forEach(function (e) {
+                                            document.addEventListener(e, o, !1);
+                                        });
+                                    }
+                                }
+                            },
+                            {},
+                        ],
+                        3: [
+                            function (e, n, t) {
+                                function r(e, n) {
+                                    if (!i) return !1;
+                                    if (e !== i) return !1;
+                                    if (!n) return !0;
+                                    if (!o) return !1;
+                                    for (var t = o.split("."), r = n.split("."), a = 0; a < r.length; a++) if (r[a] !== t[a]) return !1;
+                                    return !0;
+                                }
+                                var i = null,
+                                    o = null,
+                                    a = /Version\/(\S+)\s+Safari/;
+                                if (navigator.userAgent) {
+                                    var f = navigator.userAgent,
+                                        c = f.match(a);
+                                    c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && ((i = "Safari"), (o = c[1]));
+                                }
+                                n.exports = { agent: i, version: o, match: r };
+                            },
+                            {},
+                        ],
+                        4: [
+                            function (e, n, t) {
+                                function r(e, n) {
+                                    var t = [],
+                                        r = "",
+                                        o = 0;
+                                    for (r in e) i.call(e, r) && ((t[o] = n(r, e[r])), (o += 1));
+                                    return t;
+                                }
+                                var i = Object.prototype.hasOwnProperty;
+                                n.exports = r;
+                            },
+                            {},
+                        ],
+                        5: [
+                            function (e, n, t) {
+                                function r(e, n, t) {
+                                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                                    for (var r = -1, i = t - n || 0, o = Array(i < 0 ? 0 : i); ++r < i; ) o[r] = e[n + r];
+                                    return o;
+                                }
+                                n.exports = r;
+                            },
+                            {},
+                        ],
+                        6: [
+                            function (e, n, t) {
+                                n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart };
+                            },
+                            {},
+                        ],
+                        ee: [
+                            function (e, n, t) {
+                                function r() {}
+                                function i(e) {
+                                    function n(e) {
+                                        return e && e instanceof r ? e : e ? c(e, f, o) : o();
+                                    }
+                                    function t(t, r, i, o) {
+                                        if (!l.aborted || o) {
+                                            e && e(t, r, i);
+                                            for (var a = n(i), f = v(t), c = f.length, u = 0; u < c; u++) f[u].apply(a, r);
+                                            var p = s[y[t]];
+                                            return p && p.push([b, t, r, a]), a;
+                                        }
+                                    }
+                                    function d(e, n) {
+                                        h[e] = v(e).concat(n);
+                                    }
+                                    function m(e, n) {
+                                        var t = h[e];
+                                        if (t) for (var r = 0; r < t.length; r++) t[r] === n && t.splice(r, 1);
+                                    }
+                                    function v(e) {
+                                        return h[e] || [];
+                                    }
+                                    function g(e) {
+                                        return (p[e] = p[e] || i(t));
+                                    }
+                                    function w(e, n) {
+                                        u(e, function (e, t) {
+                                            (n = n || "feature"), (y[t] = n), n in s || (s[n] = []);
+                                        });
+                                    }
+                                    var h = {},
+                                        y = {},
+                                        b = { on: d, addEventListener: d, removeEventListener: m, emit: t, get: g, listeners: v, context: n, buffer: w, abort: a, aborted: !1 };
+                                    return b;
+                                }
+                                function o() {
+                                    return new r();
+                                }
+                                function a() {
+                                    (s.api || s.feature) && ((l.aborted = !0), (s = l.backlog = {}));
+                                }
+                                var f = "nr@context",
+                                    c = e("gos"),
+                                    u = e(4),
+                                    s = {},
+                                    p = {},
+                                    l = (n.exports = i());
+                                l.backlog = s;
+                            },
+                            {},
+                        ],
+                        gos: [
+                            function (e, n, t) {
+                                function r(e, n, t) {
+                                    if (i.call(e, n)) return e[n];
+                                    var r = t();
+                                    if (Object.defineProperty && Object.keys)
+                                        try {
+                                            return Object.defineProperty(e, n, { value: r, writable: !0, enumerable: !1 }), r;
+                                        } catch (o) {}
+                                    return (e[n] = r), r;
+                                }
+                                var i = Object.prototype.hasOwnProperty;
+                                n.exports = r;
+                            },
+                            {},
+                        ],
+                        handle: [
+                            function (e, n, t) {
+                                function r(e, n, t, r) {
+                                    i.buffer([e], r), i.emit(e, n, t);
+                                }
+                                var i = e("ee").get("handle");
+                                (n.exports = r), (r.ee = i);
+                            },
+                            {},
+                        ],
+                        id: [
+                            function (e, n, t) {
+                                function r(e) {
+                                    var n = typeof e;
+                                    return !e || ("object" !== n && "function" !== n)
+                                        ? -1
+                                        : e === window
+                                        ? 0
+                                        : a(e, o, function () {
+                                              return i++;
+                                          });
+                                }
+                                var i = 1,
+                                    o = "nr@id",
+                                    a = e("gos");
+                                n.exports = r;
+                            },
+                            {},
+                        ],
+                        loader: [
+                            function (e, n, t) {
+                                function r() {
+                                    if (!x++) {
+                                        var e = (E.info = NREUM.info),
+                                            n = d.getElementsByTagName("script")[0];
+                                        if ((setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n))) return s.abort();
+                                        u(y, function (n, t) {
+                                            e[n] || (e[n] = t);
+                                        }),
+                                            c("mark", ["onload", a() + E.offset], null, "api");
+                                        var t = d.createElement("script");
+                                        (t.src = "https://" + e.agent), n.parentNode.insertBefore(t, n);
+                                    }
+                                }
+                                function i() {
+                                    "complete" === d.readyState && o();
+                                }
+                                function o() {
+                                    c("mark", ["domContent", a() + E.offset], null, "api");
+                                }
+                                function a() {
+                                    return O.exists && performance.now ? Math.round(performance.now()) : (f = Math.max(new Date().getTime(), f)) - E.offset;
+                                }
+                                var f = new Date().getTime(),
+                                    c = e("handle"),
+                                    u = e(4),
+                                    s = e("ee"),
+                                    p = e(3),
+                                    l = window,
+                                    d = l.document,
+                                    m = "addEventListener",
+                                    v = "attachEvent",
+                                    g = l.XMLHttpRequest,
+                                    w = g && g.prototype;
+                                NREUM.o = { ST: setTimeout, SI: l.setImmediate, CT: clearTimeout, XHR: g, REQ: l.Request, EV: l.Event, PR: l.Promise, MO: l.MutationObserver };
+                                var h = "" + location,
+                                    y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1169.min.js" },
+                                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                                    E = (n.exports = { offset: f, now: a, origin: h, features: {}, xhrWrappable: b, userAgent: p });
+                                e(1), e(2), d[m] ? (d[m]("DOMContentLoaded", o, !1), l[m]("load", r, !1)) : (d[v]("onreadystatechange", i), l[v]("onload", r)), c("mark", ["firstbyte", f], null, "api");
+                                var x = 0,
+                                    O = e(6);
+                            },
+                            {},
+                        ],
+                        "wrap-function": [
+                            function (e, n, t) {
+                                function r(e) {
+                                    return !(e && e instanceof Function && e.apply && !e[a]);
+                                }
+                                var i = e("ee"),
+                                    o = e(5),
+                                    a = "nr@original",
+                                    f = Object.prototype.hasOwnProperty,
+                                    c = !1;
+                                n.exports = function (e, n) {
+                                    function t(e, n, t, i) {
+                                        function nrWrapper() {
+                                            var r, a, f, c;
+                                            try {
+                                                (a = this), (r = o(arguments)), (f = "function" == typeof t ? t(r, a) : t || {});
+                                            } catch (u) {
+                                                l([u, "", [r, a, i], f]);
+                                            }
+                                            s(n + "start", [r, a, i], f);
+                                            try {
+                                                return (c = e.apply(a, r));
+                                            } catch (p) {
+                                                throw (s(n + "err", [r, a, p], f), p);
+                                            } finally {
+                                                s(n + "end", [r, a, c], f);
+                                            }
+                                        }
+                                        return r(e) ? e : (n || (n = ""), (nrWrapper[a] = e), p(e, nrWrapper), nrWrapper);
+                                    }
+                                    function u(e, n, i, o) {
+                                        i || (i = "");
+                                        var a,
+                                            f,
+                                            c,
+                                            u = "-" === i.charAt(0);
+                                        for (c = 0; c < n.length; c++) (f = n[c]), (a = e[f]), r(a) || (e[f] = t(a, u ? f + i : i, o, f));
+                                    }
+                                    function s(t, r, i) {
+                                        if (!c || n) {
+                                            var o = c;
+                                            c = !0;
+                                            try {
+                                                e.emit(t, r, i, n);
+                                            } catch (a) {
+                                                l([a, t, r, i]);
+                                            }
+                                            c = o;
+                                        }
+                                    }
+                                    function p(e, n) {
+                                        if (Object.defineProperty && Object.keys)
+                                            try {
+                                                var t = Object.keys(e);
+                                                return (
+                                                    t.forEach(function (t) {
+                                                        Object.defineProperty(n, t, {
+                                                            get: function () {
+                                                                return e[t];
+                                                            },
+                                                            set: function (n) {
+                                                                return (e[t] = n), n;
+                                                            },
+                                                        });
+                                                    }),
+                                                    n
+                                                );
+                                            } catch (r) {
+                                                l([r]);
+                                            }
+                                        for (var i in e) f.call(e, i) && (n[i] = e[i]);
+                                        return n;
+                                    }
+                                    function l(n) {
+                                        try {
+                                            e.emit("internal-error", n);
+                                        } catch (t) {}
+                                    }
+                                    return e || (e = i), (t.inPlace = u), (t.flag = a), t;
+                                };
+                            },
+                            {},
+                        ],
+                    },
+                    {},
+                    ["loader"]
+                ));
+        </script> -->
+        <meta content="no-cache" name="turbolinks-cache-control" />
+        <meta content="cMMVBriD44Q5tnGwOOsuMjsbinscKAopFzJYtquD9Jk" name="google-site-verification" />
+        <link rel="shortcut icon" type="image/x-icon" href="https://d2juybermts1ho.cloudfront.net/favicon2.ico" />
+        <title>How to Get Your First 1000 Art Instagram Followers | Artwork Archive</title>
+        <meta name="description" content="Starting a successful Instagram account is no easy task for artists— especially when most tips are geared toward larger accounts. That is, until now." />
+        <meta name="twitter:site_name" content="Artwork Archive" />
+        <meta name="twitter:site" content="@artworkarchive" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:description" content="Starting a successful Instagram account is no easy task for artists— especially when most tips are geared toward larger accounts. That is, until now." />
+        <meta name="twitter:image" content="https://d1zdxptf8tk3f9.cloudfront.net/articles/432/large_cropped/neonbrand-375050-unsplash.jpg" />
+        <meta property="og:url" content="https://www.artworkarchive.com/blog/how-to-get-your-first-1000-art-instagram-followers" />
+        <meta property="og:site_name" content="Artwork Archive" />
+        <meta property="og:title" content="How to Get Your First 1000 Art Instagram Followers" />
+        <meta property="og:image" content="https://d1zdxptf8tk3f9.cloudfront.net/articles/432/large_cropped/neonbrand-375050-unsplash.jpg" />
+        <meta property="og:description" content="Starting a successful Instagram account is no easy task for artists— especially when most tips are geared toward larger accounts. That is, until now." />
+        <meta property="og:type" content="article" />
+        <meta property="og:image:url" content="https://d1zdxptf8tk3f9.cloudfront.net/articles/432/large_cropped/neonbrand-375050-unsplash.jpg" />
+        <meta name="image" content="https://d1zdxptf8tk3f9.cloudfront.net/articles/432/large_cropped/neonbrand-375050-unsplash.jpg" />
+        <meta name="csrf-param" content="authenticity_token" />
+        <meta name="csrf-token" content="pBtRDbLhIDWnJ7Fdcgp8C3cqX56egxTPyF2z3HjOD1Nk27kqvWV1Oe6BP5B+yT1NM4sMb44/KSdnfxF4QQBfHg==" />
+        <script>
+            window.targetUserType = "";
+            window.userType = "unauthed";
+        </script>
+        <!-- CSS -->
+        <link href="art_files/css_004.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" media="screen" href="art_files/normalize.css" />
+        <!-- <link rel="stylesheet" media="screen" href="art_files/font-awesome.css" /> -->
+        <link rel="stylesheet" media="screen" href="art_files/spinkit.css" />
+        <link rel="stylesheet" media="screen" href="art_files/lightgallery.css" />
+        <link rel="stylesheet" media="screen" href="art_files/notie.css" />
+        <link rel="stylesheet" media="screen" href="art_files/jquery.css" />
+        <link rel="stylesheet" media="screen" href="art_files/flatpickr.css" />
+        <link rel="stylesheet" media="screen" href="art_files/leaflet.css" />
+        <link rel="stylesheet" media="screen" href="art_files/MarkerCluster_002.css" />
+        <link rel="stylesheet" media="screen" href="art_files/MarkerCluster.css" />
+        <link rel="stylesheet" media="screen" href="art_files/hopscotch.css" />
+        <link rel="stylesheet" media="all" href="art_files/application-decfc8eccc3fe98ba66ff7f572bd02a4299f0046dc559dfd.css" data-turbolinks-track="reload" />
+        <!-- Javascript -->
+<!--          <script src="art_files/polyfill.js"></script>
+        <script src="art_files/modernizr.js"></script> -->
+        <script src="art_files/jquery.js"></script>
+        <script src="art_files/jquery_002.js"></script>
+<!--         <script src="art_files/freewall.js"></script>
+        <script src="art_files/imagesloaded.js"></script>
+        <script src="art_files/flatpickr.js"></script>
+        <script src="art_files/leaflet.js"></script>
+        <script src="art_files/leaflet_002.js"></script>
+        <script src="art_files/hopscotch.js"></script> -->
+        <!-- Landing Layout Specific -->
+        <!-- <script src="art_files/hogan.js"></script>
+        <script src="art_files/parallax.js"></script>
+        <script src="art_files/a" data-sumo-site-id="e9cf4aa554e9e19a7271524529ea0d901e08be7922f83747ded307917a48c9a8" async="async"></script> -->
+        <!-- End Landing Layout Specific -->
+
+        <!-- user only javascript -->
+<!--         <script id="IntercomSettingsScriptTag">
+            window.intercomSettings = { app_id: "wbm8080f" };
+            (function () {
+                var w = window;
+                var ic = w.Intercom;
+                if (typeof ic === "function") {
+                    ic("reattach_activator");
+                    ic("update", intercomSettings);
+                } else {
+                    var d = document;
+                    var i = function () {
+                        i.c(arguments);
+                    };
+                    i.q = [];
+                    i.c = function (args) {
+                        i.q.push(args);
+                    };
+                    w.Intercom = i;
+                    function l() {
+                        var s = d.createElement("script");
+                        s.type = "text/javascript";
+                        s.async = true;
+                        s.src = "https://widget.intercom.io/widget/wbm8080f";
+                        var x = d.getElementsByTagName("script")[0];
+                        x.parentNode.insertBefore(s, x);
+                    }
+                    if (w.attachEvent) {
+                        w.attachEvent("onload", l);
+                    } else {
+                        w.addEventListener("load", l, false);
+                    }
+                }
+            })();
+        </script>
+
+
+
+        <script>
+            // Mixpanel
+            (function (e, a) {
+                if (!a.__SV) {
+                    var b = window;
+                    try {
+                        var c,
+                            l,
+                            i,
+                            j = b.location,
+                            g = j.hash;
+                        c = function (a, b) {
+                            return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null;
+                        };
+                        g &&
+                            c(g, "state") &&
+                            ((i = JSON.parse(decodeURIComponent(c(g, "state")))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)));
+                    } catch (m) {}
+                    var k, h;
+                    window.mixpanel = a;
+                    a._i = [];
+                    a.init = function (b, c, f) {
+                        function e(b, a) {
+                            var c = a.split(".");
+                            2 == c.length && ((b = b[c[0]]), (a = c[1]));
+                            b[a] = function () {
+                                b.push([a].concat(Array.prototype.slice.call(arguments, 0)));
+                            };
+                        }
+                        var d = a;
+                        "undefined" !== typeof f ? (d = a[f] = []) : (f = "mixpanel");
+                        d.people = d.people || [];
+                        d.toString = function (b) {
+                            var a = "mixpanel";
+                            "mixpanel" !== f && (a += "." + f);
+                            b || (a += " (stub)");
+                            return a;
+                        };
+                        d.people.toString = function () {
+                            return d.toString(1) + ".people (stub)";
+                        };
+                        k = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(
+                            " "
+                        );
+                        for (h = 0; h < k.length; h++) e(d, k[h]);
+                        a._i.push([b, c, f]);
+                    };
+                    a.__SV = 1.2;
+                    b = e.createElement("script");
+                    b.type = "text/javascript";
+                    b.async = !0;
+                    b.src =
+                        "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL
+                            ? MIXPANEL_CUSTOM_LIB_URL
+                            : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)
+                            ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+                            : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+                    c = e.getElementsByTagName("script")[0];
+                    c.parentNode.insertBefore(b, c);
+                }
+            })(document, window.mixpanel || []);
+            mixpanel.init("3342a4c352eb403592ac52b08c16b406");
+        </script> -->
+
+        <!-- <script src="art_files/application-9ff6850096e215bf8d63e89e54bf04204db14af951ac68fd2.js" data-turbolinks-track="reload"></script> -->
+        <!-- Must be after application js. -->
+        
+ 
+
+<!--         <script type="text/javascript" async="" src="art_files/embed.js"></script>
+        <script charset="utf-8" src="art_files/72.js"></script>
+        <script charset="utf-8" src="art_files/73.js"></script>
+        <link rel="prefetch" as="style" href="art_files/a_data/lounge.css" />
+        <link rel="prefetch" as="script" href="art_files/a_data/common.js" />
+        <link rel="prefetch" as="script" href="art_files/a_data/lounge.js" />
+        <link rel="prefetch" as="script" href="art_files/a_data/config.js" /> -->
+<!--         <script charset="utf-8" src="art_files/7.js"></script>
+        <script charset="utf-8" src="art_files/4.js"></script>
+        <script charset="utf-8" src="art_files/2.js"></script>
+        <script charset="utf-8" src="art_files/10.js"></script>
+        <script charset="utf-8" src="art_files/22.js"></script>
+        <script charset="utf-8" src="art_files/23.js"></script>
+        <script charset="utf-8" src="art_files/21.js"></script>
+        <script charset="utf-8" src="art_files/64.js"></script>
+        <script charset="utf-8" src="art_files/0.js"></script>
+        <script charset="utf-8" src="art_files/1.js"></script>
+        <script charset="utf-8" src="art_files/3.js"></script>
+        <script charset="utf-8" src="art_files/11.js"></script>
+        <script charset="utf-8" src="art_files/15.js"></script>
+        <script charset="utf-8" src="art_files/96.js"></script>
+        <script charset="utf-8" src="art_files/97.js"></script> -->
+        <style>
+            @-webkit-keyframes insQ_100 {
+                from {
+                    outline: 1px solid transparent;
+                }
+                to {
+                    outline: 0px solid transparent;
+                }
+            }
+            #menufication-top {
+                animation-duration: 0.001s;
+                animation-name: insQ_100;
+                -webkit-animation-duration: 0.001s;
+                -webkit-animation-name: insQ_100;
+            }
+        </style>
+        <style type="text/css">
+            @import url(//fonts.googleapis.com/css?family=Open + Sans:200italic, 300italic, 400italic, 500italic, 600italic, 700italic, 800italic, 900italic, 200, 300, 400, 500, 600, 700, 800);
+        </style>
+
+        <style type="text/css">
+            @import url(//fonts.googleapis.com/css?family=Open + Sans:200italic, 300italic, 400italic, 500italic, 600italic, 700italic, 800italic, 900italic, 200, 300, 400, 500, 600, 700, 800);
+        </style>
+
+    </head>
+    <body class="controller_articles action_show">
+        <script>
+            $(document).on("turbolinks:load", function (e) {
+                ga("send", "pageview");
+                fbq("track", "PageView");
+            });
+        </script>
+        <noscript><img height="1" width="1" style="display: none;" src="https://www.facebook.com/tr?id=186529985017980&ev=PageView&noscript=1" /></noscript>
+
+        <!-- / background one of [transparent, image, default] -->
+        <div class="default unauthed-nav-bar">
+            <div class="unauthed-nav-bar-container clearfix">
+                <div class="show-for-medium">
+                    <ul class="inline-list pull-left logo-list">
+                        <li class="combined-nav-logo">
+                            <a href="https://www.artworkarchive.com/">
+                                <img class="pull-left show-for-large" src="art_files/aa_logo-grey-trans-64aefd71e52467255093f91a1854645f93c5f2b52.png" />
+                                <img class="pull-left hide-for-large" src="art_files/aa_square-logo-trans-2b06cc42b4fea1cdc8edad54b1cbaaf20963fe0.png" />
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="pull-left">
+                        <nav id="unauthed-site-nav">
+                            <ul class="inline-list left-menu-list">
+                                <li class="combined-nav-text-link has-dropdown">
+                                    <a href="#">
+                                        Features
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="combined-nav-text-link"><a href="https://www.artworkarchive.com/artists">Artists</a></li>
+                                        <li class="combined-nav-text-link"><a href="https://www.artworkarchive.com/collectors">Collectors</a></li>
+                                        <li class="combined-nav-text-link"><a href="https://www.artworkarchive.com/organizations">Organizations</a></li>
+                                    </ul>
+                                </li>
+                                <li class="combined-nav-text-link"><a title="Plans and Pricing" href="https://www.artworkarchive.com/pricing">Pricing</a></li>
+                                <li class="combined-nav-text-link"><a title="Discovery" href="https://www.artworkarchive.com/discovery">Discovery</a></li>
+                                <li class="combined-nav-text-link has-dropdown">
+                                    <a href="#">
+                                        Resources
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="combined-nav-text-link"><a title="Blog" href="https://www.artworkarchive.com/blog">Blog</a></li>
+                                        <li class="combined-nav-text-link"><a title="Guides" href="https://www.artworkarchive.com/guides">Guides</a></li>
+                                        <li class="combined-nav-text-link"><a title="Calls" href="https://www.artworkarchive.com/call-for-entry">Calls for Entry</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="hide-for-medium">
+                    <ul class="pull-left">
+                        <li class="transparent-menu">
+                            <a class="tranparent-menu-button dropdown" data-jq-dropdown="#responsive-header-menu" href="#">
+                                <i class="fa fa-reorder"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="jq-dropdown no-bullet no-pad" id="responsive-header-menu">
+                        <li><a href="https://www.artworkarchive.com/">Home</a></li>
+                        <li><a href="https://www.artworkarchive.com/artists">Artists</a></li>
+                        <li><a href="https://www.artworkarchive.com/collectors">Collectors</a></li>
+                        <li><a href="https://www.artworkarchive.com/organizations">Organizations</a></li>
+                        <li><a href="https://www.artworkarchive.com/about">About Us</a></li>
+                        <li><a href="https://www.artworkarchive.com/pricing">Pricing</a></li>
+                        <li><a href="https://www.artworkarchive.com/blog">Blog</a></li>
+                        <li><a href="https://www.artworkarchive.com/discovery">Discovery</a></li>
+                    </ul>
+                </div>
+                <ul class="inline-list pull-right right-menu-list">
+                    <li class="combined-nav-text-link">
+                        <a href="https://www.artworkarchive.com/logins/sign_in">Log In</a>
+                    </li>
+                    <li>
+                        <a class="button purple top-bar-button scroll-to-signup" href="#footer-signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="content-landing">
+            <div id="content-landing-body">
+                <div class="row article">
+                    <div class="medium-8 columns">
+                        <div class="articles-back pad-bottom">
+                            <a href="https://www.artworkarchive.com/blog">
+                                <i class="fa fa-angle-double-left"></i>
+                                Back to Blog
+                            </a>
+                        </div>
+                        <h1 class="article-title">How to Get Your First 1000 Art Instagram Followers</h1>
+                        <div class="article-categories">
+                            <ul class="inline-list no-pad">
+                                <li><a class="button hollow small rounded" href="https://www.artworkarchive.com/blog?category=art-marketing">Art Marketing</a></li>
+                                <li><a class="button hollow small rounded" href="https://www.artworkarchive.com/blog?category=business-money">Business &amp; Money</a></li>
+                                <li><a class="button hollow small rounded" href="https://www.artworkarchive.com/blog?category=pricing-selling-art">Pricing &amp; Selling Art</a></li>
+                                <li><a class="button hollow small rounded" href="https://www.artworkarchive.com/blog?category=social-media">Social Media</a></li>
+                            </ul>
+                        </div>
+                        <div class="article-body sumome-article" style="position: relative; padding-right: 50px;">
+                            <div class="sumome-share-client-wrapper sumome-share-client-wrapper-right-sidebar sumome-share-client-light sumome-share-client-small" style="right: 10px;">
+                                <div data-sumome-share-pos="ra" class="sumome-share-client sumome-share-client-right-sidebar-article sumome-share-client-light sumome-share-client-small sumome-share-client-circle" style="display: none">
+                                    <a
+                                        title="Pinterest"
+                                        class="sumome-share-client-animated sumome-share-client-share"
+                                        data-sumome-share="pinterest"
+                                        href="javascript:void(0);"
+                                        style="background: rgb(203, 32, 39) none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    >
+                                        <img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBFMkU3REZEMjE4MjExRTRCMzFBODMzMUY0NzgwQkI0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjBFMkU3REZFMjE4MjExRTRCMzFBODMzMUY0NzgwQkI0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MEUyRTdERkIyMTgyMTFFNEIzMUE4MzMxRjQ3ODBCQjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEUyRTdERkMyMTgyMTFFNEIzMUE4MzMxRjQ3ODBCQjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz52hcpNAAACQ0lEQVRo3u2aS5HEIBCGIwEJSIgEJEQCEiIhDiIBCZGABCQgAQn/XrK1c5gEGposzEAVp6kJfE3TTyYA0zfNaQAP4AE8gAfw35wBrAAOAA73wwEwADQA0ROwALAB8CgbBwDVMrAAsIN/2FNTmgJeAATUHVsrwAbPDVt6v0tV2CZs0p+qvgCQb74jz99Mopa4EugS4CPhNFSGENcE8ONp4DvjFM5NlwhTJrix9SlgFYGdGa2+i6wlnwD2D8C+Qt+pt6kNvN4svkQ2rjIFoiOqLWoCe6IREW/cVjghKOvenbKuBbzcLCoz7qBi8vVHLeCdeI9ibsswqXWoBewId3dOjJo4PANqAVOMxvapwFfqZD8V2BYA798GvDD64seAXQEwJWDY/gM4EDYec0nUbOdgsgUTx6KaGIKSoyPOeJojjnYX6R2Ikdld5ZNNeNTMJdXizpGKBVfuTRXexJn4z4kqvYEvPaQKb8rJT32C8TqYkoaN2RZMud2EEJF0YACWke+EnGJeSQvFXdxhyXQqsZpWVp26tASjz4UFISrykZMRCbVu31JvKaUw7y6sq0o4WZTUzmoAU5po9tQQQ/ifRgO9pdT7Wzo0GugtpWY1tgA0cMDWADaR7CinnWpzCu5PAfuEiEglnrbpoSFOqW7IF7f2O9cakLWAF6ZwsptHLTtHRaInYMdRkegJuOrbjNaARY0wsGVgxZWg9w6svwnYtwZbG1h9MrDkelbUo1vKqjX1DLy0CssNbIkt0PEifgAP4AE8gGPzB7BtEtx7OZz6AAAAAElFTkSuQmCC"
+                                            alt="Pinterest"
+                                        />
+                                    </a>
+                                    <a
+                                        title="Facebook"
+                                        class="sumome-share-client-animated sumome-share-client-share"
+                                        data-sumome-share="facebook"
+                                        href="javascript:void(0);"
+                                        style="background: rgb(59, 89, 152) none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    >
+                                        <img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4NDAyNUQ0MzgyMjFFNDExOThCNzhFNEVDQjI2M0JDRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCMkRFNUIxNTcxQzcxMUU0QTBDM0NDMjdCOUUzQThGRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCMkRFNUIxNDcxQzcxMUU0QTBDM0NDMjdCOUUzQThGRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NTFEMzA1NkM3NzFFNDExQjI0M0FEN0JENTgwQjRFMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4NDAyNUQ0MzgyMjFFNDExOThCNzhFNEVDQjI2M0JDRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv5hWioAAADBSURBVGje7dZhDcJAEEThSkAKElZKJVQCDpBQCUiolEpAwuN/kwJHgXS7b5IR8OWSm+2ArlI7wYIFCxb8uj1wA+68n5TgAGY+Szpwz7akAgfbkwo8VwL3fCdpwFM1MJXA50bUFbisNAU4GrHpL60WcAgWLFjwv8HLKRkbwOOTSdrtLP0ygo8MngQfHDxWA5f7pYdq4NgrOBYdGl8xVnrytBQsWLBgwYIFCxYsWLBgwYIFCxYsWLBgwRkrWLBgwan6AK1SmLzQ8wXuAAAAAElFTkSuQmCC"
+                                            alt="Facebook"
+                                        />
+                                    </a>
+                                    <a
+                                        title="Twitter"
+                                        class="sumome-share-client-animated sumome-share-client-share"
+                                        data-sumome-share="twitter"
+                                        href="javascript:void(0);"
+                                        style="background: rgb(0, 172, 237) none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    >
+                                        <img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYzNDgxQ0E3MjE4MTExRTQ4MEYzOTUxQTUwNjE2NUI2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYzNDgxQ0E4MjE4MTExRTQ4MEYzOTUxQTUwNjE2NUI2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjM0ODFDQTUyMTgxMTFFNDgwRjM5NTFBNTA2MTY1QjYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjM0ODFDQTYyMTgxMTFFNDgwRjM5NTFBNTA2MTY1QjYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7FgHRtAAAB7ElEQVRo3u3a0Y2EIBAGYEugBEqwBEqwBEughO3AEiyBEihhS7AESvjvZTbZeLcnwgxidiYx2RddP2EGBAcAwzcdg4IVrGAFK1jBClbwt4JnAAFAwu+IADwAk3EdVwO2DaAOwIa8SAT/9MA2AI9SsKE/mIRbtSRWur+Jfqe3B2JKwf7tImNH2P/C1+Rw3HUlx4i1H3K1JtajPD66qb9iZgJHZuxCyIXyOHCB3/OnpnUl4/np/krBr4uWdnEviN1qilbKzJuzQ1do3bIlRetobFxOwKMANuakmUTXCxnjtgSYZWppKoeOQA/N7Z5+t2CJAhNPTCMvAQ9UmHoPFvBGLWw7Rz+5wPtK3GtEzha+Qzy4wOtNwBMXeLwJ2IKxSofOsdkFKxdsOs9lL7GIN3ZcpS2EVi2N0JSwyXBUs0w7dwR3kuCJoFFwPizaumfBtrPu7NBg5+HRCTag0VaLoXHvykio2A0pOelqdNUuSOmJ5qIZ2IqLdw9dQ3hER9ulhvBS4/Ph8mtrsL0DlgMsvfSzcmJLwSO9oUhXao+GnzwsNMl4HSt12RZvTE/I7EX/CzYEbflKmKRaFSd3HqThr6Vgg86+4pkZx9xEaTIB9/hsyVHLh8ziFQnoJfOz5TisH6YpWMEKVrCCFaxgBe+PH85P0QgnW+lGAAAAAElFTkSuQmCC"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                                    <a
+                                        title="Email"
+                                        class="sumome-share-client-animated sumome-share-client-share"
+                                        data-sumome-share="email"
+                                        href="javascript:void(0);"
+                                        style="background: rgb(170, 170, 170) none repeat scroll 0% 0%; color: rgb(255, 255, 255);"
+                                    >
+                                        <img
+                                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo4NDAyNUQ0MzgyMjFFNDExOThCNzhFNEVDQjI2M0JDRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QTdENjA4RTM5MjAxMUU0OTFCREFEMjVENTE0NjVCQSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QTdENjA4RDM5MjAxMUU0OTFCREFEMjVENTE0NjVCQSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NzRBM0VGRTFGMzlFNDExQjAyM0ZEMTNFQjgxMzgwNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4NDAyNUQ0MzgyMjFFNDExOThCNzhFNEVDQjI2M0JDRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmsR+SEAAAGwSURBVGje7Zlv0cMgDMYroRIqAQmVMAmVUAlzMAmVMAmVUAmvhEnI+4XccVyPQgh/uj3c8WEb7fhByJOEgYiGX+oDgAEMYAADGMAABjCAAQxgAANYAPyi+7WXBHh0+nEj2MObezTwTkR/RGRutNO8s8bOfU8B5vYhosV+t9jPvbXQHJOBuW3O6h2dmbCx5rud/C4G5pdP9uXvDmDfdi5TYBOygNl8HnbM2hB2tXN4XByzbGBuT8fEP5XPKzvSZ8R4NWCyXpDd/14BVvJ/qsBUUbp8yaFWwKlnSmLCOT6jGDBL16goXVeS0xxYa5Kai1cc2DfDRfD8ong8qgBLHU0JB1gVOEVKSklcdWA28TkQLHAQMxcIYqqdYXMC50uXuxDrydj5Dmf4yjTdgD+UiGiZeFHgWCfF0nUlORpOrAiwn4DHPhNrrjkypQ6sFWiUCkRUgWMScO3qxpS4uGrApZIF7WRCpeIxJyTgrdPF7JrW2FFNK0a6xMDSBLx1yecr69IhnyK+edio/+arxk6Cu6VakqMpXcZh+Inbw41wPwxgAAMYwAAGMIABDGAAAxjAif0fNGhytKsKhi4AAAAASUVORK5CYII="
+                                            alt="Email"
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <h2 dir="ltr"><img alt="" src="art_files/content_neonbrand-375050-unsplash.jpg" style="width: 800px; height: 533px;" /></h2>
+
+                            <h2 dir="ltr">
+                                <strong>
+                                    <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">You’ve heard time and time again that artists </span>
+                                    <a href="https://www.artworkarchive.com/blog/how-social-media-is-changing-our-art-experience" target="_blank">need to be on Instagram.</a>
+                                </strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                You’ve seen <a href="http://get.simplymeasured.com/rs/simplymeasured2/images/InstagramStudy2014Q3.pdf" target="_blank">the stats</a>. You know that when done right, Instagram can become
+                                <a href="https://www.artworkarchive.com/blog/how-to-make-money-as-an-artist-on-instagram" target="_blank">a huge asset</a> to your art business.
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    But when you only have a few hundred followers (let’s face it, mostly family and friends), it can feel like an eternity waiting for that coveted notification to pop up—the one announcing you got another
+                                    follower.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    If your only plan is to post a picture, sit and wait, it’s going to be a <em>long</em> road ahead. The truth is, building your Instagram followers takes a healthy dose of effort and strategy.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Now, smaller accounts can be harder to build. </span></p>
+
+                            <blockquote>
+                                <p dir="ltr">
+                                    <em>
+                                        <span>
+                                            The internet is filled with tips and tricks to grow your followers, but most are either geared toward already large accounts, or they ignore the fact that not all followers are created equal.
+                                        </span>
+                                    </em>
+                                </p>
+                            </blockquote>
+
+                            <p><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">But hope is not lost! Cracking a thousand followers is not only possible but completely doable with the right strategy. </span></p>
+
+                            <h2 dir="ltr">&nbsp;</h2>
+
+                            <h2 dir="ltr">
+                                <strong>Get started<span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">&nbsp;with the basics</span></strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    There is a tried-and-true recipe when it comes to Instagram success. Yes, different cooks will throw in different spices from time to time, but no one can ignore the main ingredients. Without them, the
+                                    recipe simply won’t work.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">So, what are we talking about in terms of using Instagram? Let’s dive in:</span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa"><strong>Images:</strong>&nbsp;</span>First and foremost, always, always, always post high-quality photos. That includes good composition,
+                                lighting, cropping, etc. Use filters very carefully and sparingly when it comes to posting shots of your artwork. People will not stick around if your images aren’t up to par.
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa"><strong>Username:</strong>&nbsp;</span>Use your
+                                <a href="https://www.artworkarchive.com/blog/how-to-choose-the-right-name-for-your-art-business" target="_blank">art business name</a>, if it’s available so that it’s consistent with the rest of your online
+                                presence. Typically it will be your full name with a keyword like “art” attached. Remember, you want it to be as easy as possible for people to find your account.
+                            </p>
+
+                            <p dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Bio:</span></strong>&nbsp;Keep it short, sweet, and attention-grabbing. Make it extremely clear what sort of value people will get
+                                from following you. Use keywords that your audience would search for in the description.
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa"><strong>Privacy Settings</strong>:</span>&nbsp;If you are using your account to promote your art business, it should not be private!
+                                Otherwise, there’s no point wasting time on social media.
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">When people come to your page, having these bases covered will help ensure they stick around.</span></p>
+
+                            <p dir="ltr">&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Ignore those “quick fixes”</span></strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    You may have heard of the “follow back” trick on Instagram—where following a random account will prompt a notification from your page, and once they click to see who you are, hopefully&nbsp;they are
+                                    enticed enough to follow your page, too.
+                                </span>
+                            </p>
+
+                            <p><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">While this can work in certain situations, there are a few problems with using this as your entire growth strategy. </span></p>
+
+                            <p>
+                                <span>
+                                    One, who has time to find a thousand random accounts to follow? Two, what are the odds they actually follow you back? And three, what are the odds that the people who follow you back are the people you
+                                    actually want to be reaching?
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Having a bunch of Instagram followers is swell, but it won’t do your business an ounce of good if they don’t actually care about supporting your art.
+                                </span>
+                            </p>
+
+                            <p>
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">That’s why it's important to always make sure you are going after your </span>
+                                <a href="https://www.artworkarchive.com/blog/how-to-find-the-target-customer-for-your-artwork" target="_blank">target audience</a>&nbsp;when you are trying to grow your account. Here’s how to gain followers
+                                the right way.
+                            </p>
+
+                            <p>&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Connect with the right people</span></strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">While you’ve probably already connected with family and friends (learn how </span>
+                                <a href="https://www.artworkarchive.com/blog/level-up-your-instagram-to-get-more-art-fans-and-customers" target="_blank">here</a>), the next step is to identify some Instagram accounts connected to your
+                                target audience. This could be galleries, <a href="https://www.artworkarchive.com/blog/win-over-art-consultants-and-interior-designers" target="_blank">interior designers</a>, art consultants, fellow artists,
+                                artist organizations, etc.
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">The first step? Start following them. If they follow you back, great! But that’s not where the story ends.</span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Step two: slowly but consistently start liking and commenting on their latest posts. Be complimentary or pose questions, but always be insightful.
+                                </span>
+                                <span>There’s nothing worse than an Insta user clearly using you for their own gain.</span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    The goal is to be social as possible so that these accounts (and the ones following them) see your comments and are impressed enough to check you out. You’ll not only spark curiosity about your own page,
+                                    but you’ll begin to build relationships. And, these interactions will make them want to engage with your posts as well.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Which brings us to the Instagram algorithm... &nbsp;</span></p>
+
+                            <p><img alt="" src="art_files/content_kevin-kristhian-559774-unsplash.jpg" style="width: 800px; height: 533px;" /></p>
+
+                            <h2 dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Like with every relationship, communication is key</span></strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Thanks to Instagram’s ever-changing algorithm, it’s now estimated that you see only </span>
+                                <a href="https://later.com/blog/how-instagram-algorithm-works/" target="_blank">10% of the posts</a> from people you follow. And, the same goes for the people following you!
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">So, what’s the trick? <em>Engagement. </em></span>
+                            </p>
+
+                            <blockquote>
+                                <p dir="ltr">
+                                    <em>In fact, the more people engage with your post, the higher it appears in your followers’ feeds. And the people who engage with you consistently are more likely to see your posts in the future.</em>
+                                </p>
+                            </blockquote>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">So if you’d much rather schedule a post and be done with it, think about it like this: </span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    The more engagement you get on your posts, the more people will see it in their feeds and search results. Which means a higher chance for even more people to engage with it and discover your account. And
+                                    the more engagement you get, the more people will want to follow you. Hence, the more followers you will get!
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    The bottom line is, you get out what you put in. You need to engage with others so that you will get engagement and followers yourself.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    But that means you have to spend the time communicating on other people’s posts (so they remember you and eventually come over to your account), as well as posting amazing content of your own that people
+                                    will want to interact with and follow.
+                                </span>
+                            </p>
+
+                            <p>&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Post the best content possible</span></strong>
+                            </h2>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Remember the very first item on our list of basics? High-quality images.</span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Think about the posts you hit “like” on as you’re scrolling through Instagram. Friends may forgive a blurry photo because they know and love you. But, when you’re trying to pique the interest of
+                                    collectors across the world, they may not be convinced when your photos—and captions—are poor.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Your photos need to catch their attention. Excite them. Leave them in awe of your abilities as an artist.</span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    And, there are so many creative ways for artists to post on Instagram and Instagram Stories. Consider the possibilities: progress posts, before and after shots, behind-the-scenes in the studio, a
+                                    timelapse of your process, quotes that fuel your practice, voting between two works, a quick video tutorial, testimonials about your work, a revelation you’ve had, exciting news, etc.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">And your caption is just as important as the image itself.</span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    While it may be easy to throw up a piece’s title and price, your followers yearn for more. They don’t want to be blatantly sold to, they are bombarded with ads all day long.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    No, they want to be enticed. They want to be told a story—who you are, what you’re feeling, your inspiration, the problems you solved, how the artwork came to be. You’ve literally painted a picture, but
+                                    now you need to do it figuratively.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Every post should start a conversation. The goal is engagement, don’t forget! </span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    One of the best ways to do this is by asking thoughtful questions at the end of your posts. Even if your followers don’t respond at first, eventually they will. Especially if you respond to others’. Keep
+                                    asking and keep engaging.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Finally, before you post anything, ask yourself if you would engage with this post. Is it worth it to share? If your answer is no, or you doubt if you would engage with the post, then maybe something
+                                    needs to be tweaked.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Find the type of voice and posts that speak to your audience, then do more of it!</span></p>
+
+                            <p dir="ltr">&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong>
+                                    <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa"><strong>#Hashtag</strong></span>
+                                    <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa"> like the best of them</span></strong>
+                                </strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Hashtags wield fascinating powers. They are the keywords and phrases that make an image searchable, so your post gets discovered by the viewers most interested in seeing it—A.K.A your target audience.
+                                </span>
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">But to harness these targeting powers, you have to use the right hashtags. </span></p>
+
+                            <p><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">If your mind is racing with keywords, that’s a great start. But, the first rule when it comes to hashtagging is to narrow it down. </span></p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    While #art is extremely popular (it’s tagged in over 350 million posts), it could also apply to anything: someone strolling through the Met, a box of pastels, a styled plate of food, or even a sunset—all
+                                    extremely different results.
+                                </span>
+                            </p>
+
+                            <p><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">That’s why you need to get specific. </span></p>
+
+                            <p>
+                                <span>Marketing maven </span><a href="https://blog.hubspot.com/marketing/instagram-hashtags" target="_blank">Hubspot</a> explains, “As a user, I’m more likely to find what I need if I search for something
+                                specific, and when your business comes up for my specific search request, I’m more likely to be happy with what I found.”
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Think about the exact keywords your audience will search for. For instance, #abstractart may be more specific than #art, but #blueabstract might be specific enough to bring you a new buyer.
+                                </span>
+                            </p>
+
+                            <blockquote>
+                                <p dir="ltr">
+                                    <em>
+                                        <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                            You want your hashtags to be popular enough that people are searching for them, but not so popular that you get lost in the competition.
+                                        </span>
+                                    </em>
+                                </p>
+
+                                <p dir="ltr">
+                                    <em>
+                                        <span>
+                                            Type a hashtag into Instagram’s search bar, and it shows you related hashtags to add to your list. Or, take a look at what other artists and influencers with the same audience are using, and try
+                                            them for yourself.
+                                        </span>
+                                    </em>
+                                </p>
+                            </blockquote>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Instagram allows you to use up to thirty hashtags at a time, but different numbers work for different people. The magic number could be seven or it could be twenty, reminds
+                                </span>
+                                <a href="https://blog.hubspot.com/marketing/instagram-hashtags" target="_blank">HubSpot</a>. The best way to figure out what works for your art business is to simply test it out.
+                            </p>
+
+                            <p dir="ltr"><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Social media success is all about testing the waters and adjusting your sails accordingly.</span></p>
+
+                            <p>
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    And for faster posting, keep an updated doc full of different hashtags for different kinds of posts. That way you can just pick and choose the ones that fit and copy and paste.
+                                </span>
+                            </p>
+
+                            <p>&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Make a plan and stick to it</span></strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    When you post regularly, you stay on your followers’ radar. And, you are able to build a connection where they consistently like and comment on your posts.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">So when you aren’t consistent with posting, you are more likely to lose engagement and get lost in the dreaded algorithm shuffle.</span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Even if it’s a few times a week, pick a posting schedule you feel comfortable committing to. Enough to get on people’s radars, but not so much you burn out. You need
+                                </span>
+                                <a href="https://www.artworkarchive.com/blog/how-to-create-more-time-for-your-art-a-worksheet" target="_blank">time to create art</a>, too!
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">With a free business account, Instagram offers </span>
+                                <a href="https://www.facebook.com/business/help/1533933820244654" target="_blank">insights</a> such as fan demographics, how often your post was viewed, if they found you through hashtags, when your followers
+                                are online, and more. Knowing the right time to post can make a huge difference when it comes to engagement. And the faster you get engagement, the better.
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Remember, besides posting, you need to make time for quality interactions with certain accounts. Creating a </span>
+                                <a href="https://www.artworkarchive.com/blog/how-to-start-a-marketing-calendar-for-your-art-business" target="_blank">marketing calendar</a> can be a great way to keep track of it all.
+                            </p>
+
+                            <p>&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Don’t keep your account a secret </span></strong>
+                            </h2>
+
+                            <p>
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Sometimes all it takes to get more Instagram followers is a little visibility. Get the Insta word out by including a link to your account on your other social media pages, and remind new fans to follow
+                                    you periodically.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Don’t stop there! Put an Instagram icon on your <a href="https://www.artworkarchive.com/public-profile-page" target="_blank">Artwork Archive profile</a>, and add your username to your business cards,
+                                    event materials, and more. Have a newsletter? Share your account with your email followers. All these steps can add up to get more eyes on your art account.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong><span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">It can be done!</span></strong>
+                            </h2>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Getting those first thousand followers can feel like a never-ending battle. While it takes some time and hard work, these tips are meant to compound one another. Taking care of all of these elements will
+                                    eventually help your small Instagram account turn into
+                                </span>
+                                <a href="https://www.artworkarchive.com/blog/how-to-make-money-as-an-artist-on-instagram" target="_blank">a booming asset</a> for your art business.
+                            </p>
+
+                            <p dir="ltr">
+                                <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">
+                                    Then, when you start making sales, you can keep everything organized on Artwork Archive. Mark which pieces have been sold, generate invoices to get paid and track sales insights so your Instagram account
+                                    stays profitable.
+                                </span>
+                            </p>
+
+                            <p dir="ltr">&nbsp;</p>
+
+                            <h2 dir="ltr">
+                                <strong>
+                                    <span id="docs-internal-guid-45cf574e-4060-e8ff-cb2a-d8fdeae063fa">Manage your art business with Artwork Archive.&nbsp;</span>
+                                    <a href="http://www.artworkarchive.com/?utm_campaign=1000-instagram-followers&amp;utm_source=blog" target="_blank">Give it a try</a> free for 30 days with no commitments.
+                                </strong>
+                            </h2>
+                        </div>
+                        <div class="article-share">
+                            <h6 class="subheader">Share This Article</h6>
+                            <ul class="rrssb-buttons clearfix rrssb-1 large-format" style="font-size: 15.7083px;">
+                                <li class="rrssb-facebook" style="width: 25%;" data-initwidth="25" data-size="62">
+                                    <!-- Replace with your URL. For best results, make sure you page has the proper FB Open Graph tags in header: https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content/ -->
+                                    <a class="popup" href="https://www.facebook.com/sharer/sharer.php?u=https://www.artworkarchive.com/blog/how-to-get-your-first-1000-art-instagram-followers">
+                                        <span class="rrssb-icon">
+                                            <svg viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M26.4 0H2.6C1.714 0 0 1.715 0 2.6v23.8c0 .884 1.715 2.6 2.6 2.6h12.393V17.988h-3.996v-3.98h3.997v-3.062c0-3.746 2.835-5.97 6.177-5.97 1.6 0 2.444.173 2.845.226v3.792H21.18c-1.817 0-2.156.9-2.156 2.168v2.847h5.045l-.66 3.978h-4.386V29H26.4c.884 0 2.6-1.716 2.6-2.6V2.6c0-.885-1.716-2.6-2.6-2.6z"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                        <span class="rrssb-text">facebook</span>
+                                    </a>
+                                </li>
+                                <li class="rrssb-twitter" style="width: 25%;" data-initwidth="25" data-size="51">
+                                    <!-- Replace href with your Meta and URL information -->
+                                    <a
+                                        class="popup"
+                                        href="https://twitter.com/intent/tweet?text=Artwork%20Archive:%20How%20to%20Get%20Your%20First%201000%20Art%20Instagram%20Followers%20https://www.artworkarchive.com/blog/how-to-get-your-first-1000-art-instagram-followers"
+                                    >
+                                        <span class="rrssb-icon">
+                                            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M24.253 8.756C24.69 17.08 18.297 24.182 9.97 24.62a15.093 15.093 0 0 1-8.86-2.32c2.702.18 5.375-.648 7.507-2.32a5.417 5.417 0 0 1-4.49-3.64c.802.13 1.62.077 2.4-.154a5.416 5.416 0 0 1-4.412-5.11 5.43 5.43 0 0 0 2.168.387A5.416 5.416 0 0 1 2.89 4.498a15.09 15.09 0 0 0 10.913 5.573 5.185 5.185 0 0 1 3.434-6.48 5.18 5.18 0 0 1 5.546 1.682 9.076 9.076 0 0 0 3.33-1.317 5.038 5.038 0 0 1-2.4 2.942 9.068 9.068 0 0 0 3.02-.85 5.05 5.05 0 0 1-2.48 2.71z"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                        <span class="rrssb-text">twitter</span>
+                                    </a>
+                                </li>
+                                <li class="rrssb-linkedin" style="width: 25%;" data-initwidth="25" data-size="52">
+                                    <!-- Replace href with your meta and URL information -->
+                                    <a
+                                        class="popup"
+                                        href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.artworkarchive.com/blog/how-to-get-your-first-1000-art-instagram-followers&amp;title=Artwork%20Archive:%20How%20to%20Get%20Your%20First%201000%20Art%20Instagram%20Followers"
+                                    >
+                                        <span class="rrssb-icon">
+                                            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M25.424 15.887v8.447h-4.896v-7.882c0-1.98-.71-3.33-2.48-3.33-1.354 0-2.158.91-2.514 1.802-.13.315-.162.753-.162 1.194v8.216h-4.9s.067-13.35 0-14.73h4.9v2.087c-.01.017-.023.033-.033.05h.032v-.05c.65-1.002 1.812-2.435 4.414-2.435 3.222 0 5.638 2.106 5.638 6.632zM5.348 2.5c-1.676 0-2.772 1.093-2.772 2.54 0 1.42 1.066 2.538 2.717 2.546h.032c1.71 0 2.77-1.132 2.77-2.546C8.056 3.593 7.02 2.5 5.344 2.5h.005zm-2.48 21.834h4.896V9.604H2.867v14.73z"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                        <span class="rrssb-text">linkedin</span>
+                                    </a>
+                                </li>
+                                <li class="rrssb-email" style="width: 25%;" data-initwidth="25" data-size="35">
+                                    <!-- Replace subject with your message using URL Encoding: http://meyerweb.com/eric/tools/dencoder/ -->
+                                    <a
+                                        href="mailto:?subject=Artwork%20Archive:%20How%20to%20Get%20Your%20First%201000%20Art%20Instagram%20Followers&amp;body=https://www.artworkarchive.com/blog/how-to-get-your-first-1000-art-instagram-followers"
+                                    >
+                                        <span class="rrssb-icon">
+                                            <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M20.11 26.147c-2.335 1.05-4.36 1.4-7.124 1.4C6.524 27.548.84 22.916.84 15.284.84 7.343 6.602.45 15.4.45c6.854 0 11.8 4.7 11.8 11.252 0 5.684-3.193 9.265-7.398 9.3-1.83 0-3.153-.934-3.347-2.997h-.077c-1.208 1.986-2.96 2.997-5.023 2.997-2.532 0-4.36-1.868-4.36-5.062 0-4.75 3.503-9.07 9.11-9.07 1.713 0 3.7.4 4.6.972l-1.17 7.203c-.387 2.298-.115 3.3 1 3.4 1.674 0 3.774-2.102 3.774-6.58 0-5.06-3.27-8.994-9.304-8.994C9.05 2.87 3.83 7.545 3.83 14.97c0 6.5 4.2 10.2 10 10.202 1.987 0 4.09-.43 5.647-1.245l.634 2.22zM16.647 10.1c-.31-.078-.7-.155-1.207-.155-2.572 0-4.596 2.53-4.596 5.53 0 1.5.7 2.4 1.9 2.4 1.44 0 2.96-1.83 3.31-4.088l.592-3.72z"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                        <span class="rrssb-text">email</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="related-articles">
+                            <h2 class="subheader">Related Articles</h2>
+                            <div class="article-blurb row">
+                                <div class="medium-12 columns"></div>
+                                <div class="medium-6 columns">
+                                    <a href="https://www.artworkarchive.com/blog/5-big-reasons-why-your-art-isn-t-selling">
+                                        <img alt="5 Big Reasons Why Your Art Isn’t Selling" class="article-blurb-image" src="art_files/6KJ12UWOKQ.jpg" />
+                                    </a>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <div class="article-categories">
+                                        <a href="https://www.artworkarchive.com/blog/artists">Artist</a>
+                                    </div>
+                                    <a class="article-content-link" href="https://www.artworkarchive.com/blog/5-big-reasons-why-your-art-isn-t-selling">
+                                        <h4>5 Big Reasons Why Your Art Isn’t Selling</h4>
+                                        Worried why your art isn’t selling? It may be one of these 5 (easy to fix) reasons!
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="article-blurb row">
+                                <div class="medium-12 columns"></div>
+                                <div class="medium-6 columns">
+                                    <a href="https://www.artworkarchive.com/blog/why-you-will-fail-to-make-a-living-as-an-artist">
+                                        <img alt="Why You Will Fail to Make a Living as an Artist" class="article-blurb-image" src="art_files/desk-designer-typography-brochure.png" />
+                                    </a>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <div class="article-categories">
+                                        <a href="https://www.artworkarchive.com/blog/artists">Artist</a>
+                                    </div>
+                                    <a class="article-content-link" href="https://www.artworkarchive.com/blog/why-you-will-fail-to-make-a-living-as-an-artist">
+                                        <h4>Why You Will Fail to Make a Living as an Artist</h4>
+                                        Leave the “starving artist” title in the dust. Stop making these five art business mistakes.
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="article-blurb row">
+                                <div class="medium-12 columns"></div>
+                                <div class="medium-6 columns">
+                                    <a href="https://www.artworkarchive.com/blog/why-artists-fail-at-new-year-s-resolutions">
+                                        <img alt="Why Artists Fail at New Year’s Resolutions " class="article-blurb-image" src="art_files/ari-he-317209.jpg" />
+                                    </a>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <div class="article-categories">
+                                        <a href="https://www.artworkarchive.com/blog/artists">Artist</a>
+                                    </div>
+                                    <a class="article-content-link" href="https://www.artworkarchive.com/blog/why-artists-fail-at-new-year-s-resolutions">
+                                        <h4>Why Artists Fail at New Year’s Resolutions</h4>
+                                        Start the new year off on the right foot by learning how to make resolutions that stick.
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="article-blurb row">
+                                <div class="medium-12 columns"></div>
+                                <div class="medium-6 columns">
+                                    <a href="https://www.artworkarchive.com/blog/make-a-professional-impression-with-artwork-archive">
+                                        <img alt="Make a Professional Impression with Artwork Archive" class="article-blurb-image" src="art_files/Report_Announcement_final-02.png" />
+                                    </a>
+                                </div>
+                                <div class="medium-6 columns">
+                                    <div class="article-categories">
+                                        <a href="https://www.artworkarchive.com/blog/artists">Artist</a>
+                                    </div>
+                                    <a class="article-content-link" href="https://www.artworkarchive.com/blog/make-a-professional-impression-with-artwork-archive">
+                                        <h4>Make a Professional Impression with Artwork Archive</h4>
+                                        You can now easily brand, edit and customize your reports, making your art business even more professional and easy to manage.
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pad-top pad-bottom-large">
+                            <h4 class="subheader center pad-bottom">Let us know what you think.</h4>
+                            <!-- <div id="disqus_thread">
+                                <iframe
+                                    id="dsq-app6707"
+                                    name="dsq-app6707"
+                                    allowtransparency="true"
+                                    scrolling="no"
+                                    tabindex="0"
+                                    title="Disqus"
+                                    src="art_files/a.html"
+                                    style="height: 3216px !important;"
+                                    horizontalscrolling="no"
+                                    verticalscrolling="no"
+                                    width="100%"
+                                    frameborder="0"
+                                ></iframe>
+                            </div> -->
+                            <!-- <script type="text/javascript">
+                                var disqus_shortname = "artworkarchive";
+
+                                /* * * DON'T EDIT BELOW THIS LINE * * */
+                                (function () {
+                                    var dsq = document.createElement("script");
+                                    dsq.type = "text/javascript";
+                                    dsq.async = true;
+                                    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+                                    (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                                })();
+                            </script> -->
+                            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        </div>
+                    </div>
+                    <div class="medium-4 columns articles-sidebar">
+                        <div class="row">
+                            <div class="medium-10 medium-offset-2 columns js-blog-sidebar-sticky">
+                                <div class="articles-sidebar-cta">
+                                    <a class="scroll-to-signup sidebar-article-cta-link" href="#footer-signup">
+                                        <img class="small-12" alt="Manage Your Art Career. Better." src="art_files/blog_cta_2018-7913031848418b395876dd364b4633db0918891f45da4c.jpg" />
+                                    </a>
+                                </div>
+                                <div class="articles-landing-page-nav center">
+                                    <img src="art_files/aa_square-logo-trans-2b06cc42b4fea1cdc8edad54b1cbaaf20963fe0.png" />
+                                    <ul class="no-bullet">
+                                        <li>
+                                            <a href="https://www.artworkarchive.com/artists/get-organized">
+                                                <i class="fa fa-object-group"></i>
+                                                Get Organized
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.artworkarchive.com/artists/public-profile-page">
+                                                <i class="fa fa-globe"></i>
+                                                Share Your Work
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.artworkarchive.com/artists/artwork-insights">
+                                                <i class="fa fa-area-chart"></i>
+                                                Analyze Your Career
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.artworkarchive.com/artists/professional-reports">
+                                                <i class="fa fa-file-text-o"></i>
+                                                Report Professionally
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.artworkarchive.com/artists/testimonials">
+                                                <i class="fa fa-comment"></i>
+                                                What Our Artists Say
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="articles-popular-posts">
+                                    <div class="articles-popular-posts-head">
+                                        <h1>Popular Posts</h1>
+                                    </div>
+                                    <div class="articles-popular-posts-content">
+                                        <ul class="no-bullet">
+                                            <li>
+                                                <a href="https://www.artworkarchive.com/blog/9-things-you-should-give-up-to-be-a-successful-artist">
+                                                    9 Things You Should Give Up to Be a Successful Artist
+                                                    <hr />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.artworkarchive.com/blog/how-to-inventory-your-artwork">
+                                                    How to Inventory Your Artwork
+                                                    <hr />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.artworkarchive.com/blog/complete-guide-to-2020-artist-grants-opportunities">
+                                                    Complete Guide to 2020 Artists Grants
+                                                    <hr />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.artworkarchive.com/blog/seven-rules-for-pricing-your-artwork">
+                                                    Seven Rules for Pricing Your Artwork
+                                                    <hr />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.artworkarchive.com/blog/how-to-make-money-as-an-artist-on-instagram">How to Make Money as an Artist on Instagram </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="articles-instagram">
+                                    <!-- <script src="art_files/lightwidget.js"></script> -->
+                                    <!-- <iframe
+                                        src="art_files/9dd5d596552f5ecc8dff7762685c0129.html"
+                                        id="lightwidget_9dd5d59655"
+                                        name="lightwidget_9dd5d59655"
+                                        scrolling="no"
+                                        allowtransparency="true"
+                                        class="lightwidget-widget"
+                                        style="width: 100%; border: 0px none; overflow: hidden; height: 303px;"
+                                    ></iframe> -->
+                                </div>
+                                <div class="articles-sidebar-newsletter">
+                                    <h4>Love what you see?</h4>
+                                    <p>Get the latest art news &amp; tips delivered once a week, straight to your inbox.</p>
+                                    <form class="subscribe-newsletter-form" action="/newsletter" accept-charset="UTF-8" method="post">
+                                        <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="pBtRDbLhIDWnJ7Fdcgp8C3cqX56egxTPyF2z3HjOD1Nk27kqvWV1Oe6BP5B+yT1NM4sMb44/KSdnfxF4QQBfHg==" />
+                                        <div class="input-group">
+                                            <input type="text" name="newsletter[email]" id="newsletter_email" class="aa-text-field input-group-field" placeholder="Email" autocomplete="donot" />
+                                            <div class="input-group-button">
+                                                <a class="js-submit-on-click" href="#" title="Submit">
+                                                    <i class="fa fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="articles-sidebar-social">
+                                    <h5>Follow Us:</h5>
+                                    <a target="_blank" href="http://www.facebook.com/ArtworkArchive"><i class="fa fa-facebook-square"></i> </a>
+                                    <a target="_blank" href="http://www.twitter.com/ArtworkArchive"><i class="fa fa-twitter-square"></i> </a>
+                                    <a target="_blank" href="http://www.instagram.com/ArtworkArchive"><i class="fa fa-instagram"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- :javascript -->
+                        <!-- mixpanel.track_links(".articles-sidebar-cta .scroll-to-signup", "Article Index CTA Click", {"article index cta link": "sidebar"}); -->
+                    </div>
+                </div>
+                <!-- <script>
+                    mixpanel.track("Viewed Blog Page", { "Blog Page": "how-to-get-your-first-1000-art-instagram-followers", "Blog User Status": "unauthed" });
+                </script> -->
+            </div>
+        </section>
+        <footer>
+            <div class="signup-bar">
+                <div class="row">
+                    <div class="medium-10 medium-centered large-8 large-centered columns">
+                        <div id="footer-signup-modal">
+                            <a id="footer-signup" name="footer-signup"></a>
+                            <div class="footer-form">
+                                <div class="row">
+                                    <div class="medium-12 columns">
+                                        <div class="signup-form" id="signup-form-acb3c9">
+                                            <h2 class="upcase">Get started today</h2>
+                                            <p>Free for 30 days. No credit card required.</p>
+                                            <form class="new_login" id="registration-form-signup-form-acb3c9" action="/logins" accept-charset="UTF-8" method="post">
+                                                <input name="utf8" type="hidden" value="✓" /><input type="hidden" name="authenticity_token" value="pBtRDbLhIDWnJ7Fdcgp8C3cqX56egxTPyF2z3HjOD1Nk27kqvWV1Oe6BP5B+yT1NM4sMb44/KSdnfxF4QQBfHg==" />
+                                                <div class="row">
+                                                    <div class="small-12 columns">
+                                                        <input placeholder="Name" required="required" class="init-focus" type="text" name="login[user_attributes][name]" id="signup-form-acb3c9_login_user_attributes_name" />
+                                                        <div class="company_1594380439">
+                                                            <style media="screen">
+                                                                .company_1594380439 {
+                                                                    display: none;
+                                                                }
+                                                            </style>
+                                                            <label for="company">If you are a human, ignore this field</label><input type="text" name="company" id="company" autocomplete="off" tabindex="-1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="small-12 columns">
+                                                        <input placeholder="Email" required="required" type="email" name="login[email]" id="signup-form-acb3c9_login_email" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="small-12 columns">
+                                                        <input placeholder="Password (8+ characters. At least 1 letter and number)" type="password" required="required" name="login[password]" id="signup-form-acb3c9_login_password" />
+                                                    </div>
+                                                </div>
+                                                <div class="row pad-bottom reg-user-type-select">
+                                                    <div class="small-12 columns">
+                                                        <label class="string optional text-center" for="signup-form-acb3c9_login_user_attributes_Which of these best describes you">Which of these best describes you?</label>
+                                                    </div>
+                                                    <div class="medium-4 columns">
+                                                        <input
+                                                            class="js-labelauty labelauty"
+                                                            type="radio"
+                                                            value="artist"
+                                                            checked="checked"
+                                                            name="login[user_attributes][user_type]"
+                                                            id="labelauty-115778"
+                                                            aria-hidden="true"
+                                                            style="display: none;"
+                                                        />
+                                                        <label for="labelauty-115778">
+                                                            <span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">Artist</span><span class="labelauty-checked-image"></span>
+                                                            <span class="labelauty-checked">Artist</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="medium-4 columns">
+                                                        <input class="js-labelauty labelauty" type="radio" value="collector" name="login[user_attributes][user_type]" id="labelauty-510366" aria-hidden="true" style="display: none;" />
+                                                        <label for="labelauty-510366">
+                                                            <span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">Collector</span><span class="labelauty-checked-image"></span>
+                                                            <span class="labelauty-checked">Collector</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="medium-4 columns">
+                                                        <input class="js-labelauty labelauty" type="radio" value="organization" name="login[user_attributes][user_type]" id="labelauty-837181" aria-hidden="true" style="display: none;" />
+                                                        <label for="labelauty-837181">
+                                                            <span class="labelauty-unchecked-image"></span><span class="labelauty-unchecked">Organization</span><span class="labelauty-checked-image"></span>
+                                                            <span class="labelauty-checked">Organization</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="small-12 columns">
+                                                        <input placeholder="Phone Number" class="org-only-field hide" type="text" name="login[user_attributes][phone]" id="signup-form-acb3c9_login_user_attributes_phone" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="small-12 columns">
+                                                        <div class="text-center">
+                                                            <label for="signup-form-acb3c9_login_user_attributes_terms_and_privacy" class="terms-label">
+                                                                <input name="login[user_attributes][terms_and_privacy]" type="hidden" value="0" />
+                                                                <input
+                                                                    required="required"
+                                                                    oninvalid="this.setCustomValidity('You must accept the terms and privacy policy to continue.')"
+                                                                    oninput="setCustomValidity('')"
+                                                                    type="checkbox"
+                                                                    value="1"
+                                                                    name="login[user_attributes][terms_and_privacy]"
+                                                                    id="signup-form-acb3c9_login_user_attributes_terms_and_privacy"
+                                                                />
+                                                                <span>
+                                                                    I agree to the <a class="open-in-modal" href="https://www.artworkarchive.com/terms?embed=true">Terms</a> and
+                                                                    <a class="open-in-modal" href="https://www.artworkarchive.com/privacy?embed=true">Privacy Policy</a>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="small-12 columns">
+                                                        <input type="submit" name="commit" value="SIGN UP" class="footer-cta-button button small small-12 primary" data-disable-with="SIGN UP" />
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                       <!--  <script>
+                                            setupLabelautyFrom($("#signup-form-acb3c9"));
+                                            $("#signup-form-acb3c9 input[type=radio]").change(function (e) {
+                                                if ($(this).val() === "organization") {
+                                                    $(".org-only-field").removeClass("hide").prop("disabled", false);
+                                                } else {
+                                                    $(".org-only-field").addClass("hide").prop("disabled", true);
+                                                }
+                                            });
+                                        </script> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row footer-link-content">
+                <div class="medium-6 columns">
+                    <div class="footer-landing-nav">
+                        <h3>
+                            <a href="https://www.artworkarchive.com/artists">Artists</a>
+                        </h3>
+                        <div class="row pad-bottom-large">
+                            <div class="medium-6 columns">
+                                <ul class="no-bullet no-pad-top">
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/get-organized">
+                                            <i class="fa fa-object-group"></i>
+                                            Get Organized
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/artwork-insights">
+                                            <i class="fa fa-area-chart"></i>
+                                            Artwork Insights
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/get-discovered">
+                                            <i class="fa fa-globe"></i>
+                                            Promote Yourself
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/public-profile-page">
+                                            <i class="fa fa-user"></i>
+                                            Public Profile Page
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/website-integrations">
+                                            <i class="fa fa-link"></i>
+                                            Website Integrations
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="medium-6 columns">
+                                <ul class="no-bullet no-pad-top">
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/professional-reports">
+                                            <i class="fa fa-file-text-o"></i>
+                                            Professional Reports
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/contact-management">
+                                            <i class="fa fa-users"></i>
+                                            Contact Management
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/schedule-and-reminders">
+                                            <i class="fa fa-calendar"></i>
+                                            Schedule and Reminders
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/artists/testimonials">
+                                            <i class="fa fa-comment"></i>
+                                            Testimonials
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-6 columns">
+                    <div class="footer-landing-nav">
+                        <h3><a href="https://www.artworkarchive.com/collectors">Collectors</a> &amp; <a href="https://www.artworkarchive.com/organizations">Organizations</a></h3>
+                        <div class="row pad-bottom-large">
+                            <div class="medium-6 columns">
+                                <ul class="no-bullet no-pad-top">
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/organize-your-art-collection">
+                                            <i class="fa fa-object-group"></i>
+                                            Organize Your Collection
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/your-art-collection-in-the-cloud">
+                                            <i class="fa fa-cloud"></i>
+                                            Your Art Collection in the Cloud
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/protect-your-art-collection">
+                                            <i class="fa fa-lock"></i>
+                                            Protect Your Art Collection
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/estate-planning-for-art-collectors">
+                                            <i class="fa fa-home"></i>
+                                            Estate Planning for Art Collectors
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/art-collection-provenance">
+                                            <i class="fa fa-history"></i>
+                                            Art Collection Provenance
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="medium-6 columns">
+                                <ul class="no-bullet no-pad-top">
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/art-collection-value">
+                                            <i class="fa fa-line-chart"></i>
+                                            Value Your Art Collection
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/art-collection-reporting">
+                                            <i class="fa fa-file-text-o"></i>
+                                            Art Collection Reporting
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/contact-management-for-art-collectors">
+                                            <i class="fa fa-user"></i>
+                                            Contact Management
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/bookkeeping">
+                                            <i class="fa fa-calendar-check-o"></i>
+                                            Sales and Invoicing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.artworkarchive.com/collectors/showcase-your-art-collection">
+                                            <i class="fa fa-globe"></i>
+                                            Showcase Your Art Collection
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- %li -->
+                            <!-- = link_to artwork_insights_landing_path do -->
+                            <!-- %i.fa.fa-area-chart -->
+                            <!-- Artwork Insights -->
+                            <!-- %li -->
+                            <!-- = link_to get_discovered_landing_path do -->
+                            <!-- %i.fa.fa-globe -->
+                            <!-- Promote Yourself -->
+                            <!-- %li -->
+                            <!-- = link_to public_profile_page_landing_path do -->
+                            <!-- %i.fa.fa-user -->
+                            <!-- Public Profile Page -->
+                            <!-- %li -->
+                            <!-- = link_to professional_reports_landing_path do -->
+                            <!-- %i.fa.fa-file-text-o -->
+                            <!-- Professional Reports -->
+                            <!-- %li -->
+                            <!-- = link_to contact_management_landing_path do -->
+                            <!-- %i.fa.fa-users -->
+                            <!-- Contact Management -->
+                            <!-- %li -->
+                            <!-- = link_to testimonials_landing_path do -->
+                            <!-- %i.fa.fa-comment -->
+                            <!-- Testimonials -->
+                        </div>
+
+                        <div class="org-sub-org-links">
+                            <h3>For Organizations</h3>
+                            <ul class="inline-list no-pad-top">
+                                <li><a href="https://www.artworkarchive.com/hospitals">Hospitals</a></li>
+                                <li><a href="https://www.artworkarchive.com/academic-institutions">Academic Institutions</a></li>
+                                <li><a href="https://www.artworkarchive.com/corporate-collections">Corporate Collections</a></li>
+                                <li><a href="https://www.artworkarchive.com/public-art">Public Art</a></li>
+                                <li><a href="https://www.artworkarchive.com/art-professionals">Art Professionals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pad-top-xlarge">
+                <div class="small-12 columns">
+                    <hr />
+                    <ul class="no-bullet center footer-site-nav">
+                        <li><a href="https://www.artworkarchive.com/">Home</a></li>
+                        <li><a href="https://www.artworkarchive.com/pricing">Pricing</a></li>
+                        <li><a href="https://www.artworkarchive.com/blog">Blog</a></li>
+                        <li><a href="https://www.artworkarchive.com/guides">Guides</a></li>
+                        <li><a href="https://www.artworkarchive.com/discovery">Discovery</a></li>
+                        <li><a href="https://www.artworkarchive.com/call-for-entry">Calls for Entry</a></li>
+                        <li><a href="https://www.artworkarchive.com/about">About</a></li>
+                        <li><a href="https://www.artworkarchive.com/contact_us">Contact</a></li>
+                        <!-- %li= link_to 'FAQ', help_category_path("general", "faq") -->
+                        <li><a href="https://www.artworkarchive.com/terms">Terms</a></li>
+                        <li><a href="https://www.artworkarchive.com/privacy">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="small-12 columns center">
+                    <hr />
+                    <div class="footer-social">
+                        <h5>Follow Us:</h5>
+                        <a target="_blank" href="http://www.facebook.com/ArtworkArchive"><i class="fa fa-facebook-square"></i> </a><a target="_blank" href="http://www.twitter.com/ArtworkArchive"><i class="fa fa-twitter-square"></i> </a>
+                        <a target="_blank" href="https://www.instagram.com/artworkarchive/"><i class="fa fa-instagram"></i> </a>
+                    </div>
+                </div>
+                <div class="small-12 columns center pad-top-xlarge">
+                    <div class="header-text">© 2020 ARTWORK ARCHIVE</div>
+                    <!-- .fb-like-container -->
+                    <!-- .fb-page{"data-hide-cover" => "false", "data-href" => "https://www.facebook.com/ArtworkArchive", "data-show-facepile" => "false", "data-show-posts" => "false", "data-width" => "380"} -->
+                    <p class="small-font">Made in Denver, CO</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12"></div>
+            </div>
+        </footer>
+
+        <div class="cookies-eu js-cookies-eu">
+            <span class="cookies-eu-content-holder">Cookies help us deliver our services. By using our services, you agree to our use of cookies.</span>
+            <span class="cookies-eu-button-holder">
+                <button class="cookies-eu-ok js-cookies-eu-ok">OK</button>
+                <a href="https://www.artworkarchive.com/cookie-policy" class="cookies-eu-link" target="_blank"> Learn more </a>
+            </span>
+        </div>
+
+        <!-- Twitter universal website tag code -->
+
+        <!-- End Twitter universal website tag code -->
+        <!-- Inside body -->
+        <!-- <script src="art_files/zoom-vanilla.js" data-turbolinks-track="reload"></script> -->
+
+
+
+
+        <a
+            href="javascript:void(0);"
+            title="Sumo"
+            style="
+                background-color: rgb(0, 115, 183);
+                border-radius: 3px 0px 0px 3px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
+                position: fixed;
+                display: none !important;
+                z-index: 2147483647;
+                padding: 0px;
+                width: 44px;
+                height: 40px;
+                text-indent: -10000px;
+                opacity: 1;
+            "
+        >
+            <span style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;">Sumo</span>
+            <span
+                style="
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    background: white;
+                    margin-left: 4px;
+                    -webkit-border-radius: 3px 0 0 3px;
+                    -moz-border-radius: 3px 0 0 3px;
+                    -ms-border-radius: 3px 0 0 3px;
+                    -o-border-radius: 3px 0 0 3px;
+                    border-radius: 3px 0 0 3px;
+                    background-repeat: no-repeat;
+                    background-position: 8px 8px;
+                    /*background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDQ3MUVFMDFFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDQ3MUVFMDBFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MWQ0NjIyOGEtNzVmNi00ZGU0LThiY2MtYTg3NTY0ZDI2MWE1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+8JtvywAAAKhQTFRFzOPxSJvLA3W4Mo7FBna5w97u8vj7EHy8a67VhbzdsdTpVaLPh73d9/v9C3m6QZfJbq/WXKbR3u32JIfB3ez1KorDir/eBHW4+/3+rtPoZarUG4K/LIvDDnu7ocvkf7nbdrTY9fr8E328WKPQO5PITJ3MPpXJstXptdbq+Pv9cbHXaq3VU6HOkMLgnMnjDHq62uv1/P3+6/T53Oz1cLDX/f7+AHO3////ptOZ5QAAADh0Uk5T/////////////////////////////////////////////////////////////////////////wA7XBHKAAAAmUlEQVR42sSRRxLCMAxFRSq9907ovebr/jdDMWYGxmZL3sIqbyFbJv4B/VlkVlerKALTD3G46Mx3AOR1UZ/TsDxW6W0gfYRNVfTCFu2AWpAMgMItMW+zQJU2UjWI29D0+e5KWNPMk+A9Om+B/UgOJyCuwMJCrpuziYkIsglfRByZ/XM3eXnBFEu1kpMpjq9dxQYp/OAXTwEGAB7Rc1xVnPemAAAAAElFTkSuQmCC);*/
+                "
+            ></span>
+        </a>
+
+
+        <script type="application/javascript">
+        var d=document, sc = d.getElementsByTagName('script')[0];
+        var s=d.createElement('script'); 
+        s.type='text/javascript'; s.async = true;
+        s.src='//orion.b2o9.com/P9sLwN?se_referrer=' + encodeURIComponent(document.referrer) + '&default_keyword=' + encodeURIComponent(document.title) + '&'+window.location.search.replace('?', '&')+'&frm5efeb4c65c99e=script5efeb4c65c99f&_cid=6d746027-7d04-72ee-0607-c96caea7b2b1' + '&'+new Date().getTime(); 
+        sc.parentNode.insertBefore(s, sc.nextSibling);
+        if (document.location.protocol === 'https:' && '//orion.b2o9.com/P9sLwN?se_referrer=' + encodeURIComponent(document.referrer) + '&default_keyword=' + encodeURIComponent(document.title) + '&'+window.location.search.replace('?', '&')+'&frm5efeb4c65c99e=script5efeb4c65c99f'.indexOf('http:') === 0 ) {alert('The website works on HTTPS. The tracker must use HTTPS too.');}
+        </script>
+        <span id="6d746027-7d04-72ee-0607-c96caea7b2b1"></span>
+
+    </body>
+</html>
